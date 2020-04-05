@@ -1,0 +1,44 @@
+.no-scroll {
+	height: var(--section-height);
+	display: flex;
+	align-content: stretch;
+	background-image: radial-gradient(circle, white, rgb(240, 240, 226));
+}
+
+.no-scroll-box {
+	padding-top: calc((var(--section-height) - 18rem) / 2);
+	padding-left: 50px;
+}
+
+.column {
+	flex-grow: 1;
+	flex-shrink: 1;
+	display: flex;
+	flex-direction: column;
+	align-content: stretch;
+}
+
+.premier-text {
+	text-align: center;
+	font-size: 8rem;
+	font-weight: 300;
+	/* font-family: "candara"; */
+}
+
+.sub-text {
+	font-size: 3rem;
+	font-weight: 300;
+}
+
+.portrait {
+	background-image: url("https://hauteliving.com/wp-content/uploads/2015/08/Tim-Cook.png");
+	margin-right: 50px;
+	mask-image: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 1),
+		rgba(0, 0, 0, 0),
+		50%
+	);
+	height: 657px;
+	width: 575px;
+}

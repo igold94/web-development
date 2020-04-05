@@ -1,0 +1,27 @@
+nav {
+	height: var(--navbar-height);
+	background: #1a152b;
+	box-shadow: 0px 2px 5px rgb(119, 119, 119);
+}
+
+.navbar-brand {
+	font-size: var(--nav-brand-size) !important;
+	margin-left: 15px;
+}
+
+.nav-link {
+	font-size: var(--nav-link-size) !important;
+	padding: 0 0 5px 0 !important;
+	margin: 0px 30px;
+}
+
+.navbar-collapse {
+	margin-top: 10px;
+	flex-direction: row-reverse;
+	padding-right: 15px;
+}
+
+.nav-link.active {
+	padding-bottom: 1px;
+	border-bottom: 1px solid white;
+}
