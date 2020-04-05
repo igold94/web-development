@@ -1,10 +1,10 @@
 import React from "react";
+import "../App.css";
 import "./blog.css";
-import PrimaryNavbar from "../components/primary-navbar";
 
 class Blog extends React.Component {
 	render() {
-		return <PrimaryNavbar activeLink="/blog"></PrimaryNavbar>;
+		return <div></div>;
 	}
 }
 export default Blog;

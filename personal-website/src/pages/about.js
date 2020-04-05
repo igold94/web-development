@@ -1,10 +1,10 @@
 import React from "react";
+import "../App.css";
 import "./about.css";
-import PrimaryNavbar from "../components/primary-navbar";
 
 class About extends React.Component {
 	render() {
-		return <PrimaryNavbar activeLink="/about"></PrimaryNavbar>;
+		return <div></div>;
 	}
 }
 export default About;

@@ -1,16 +1,27 @@
 import React from "react";
 import "./primary-navbar.css";
-
+import { NavLink } from "react-router-dom";
 import { Nav, Navbar } from "react-bootstrap";
 
 class PrimaryNavbar extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			avtiveLink: "/",
+		};
+	}
 	createLinks(pages) {
 		var links = [];
 		for (var [name, path] of Object.entries(pages)) {
 			links.push(
-				<Nav.Link href={path} key={path}>
+				<NavLink
+					exact
+					to={path}
+					className="nav-link"
+					activeClassName="active"
+				>
 					{name}
-				</Nav.Link>
+				</NavLink>
 			);
 		}
 		return links;
@@ -25,13 +36,13 @@ class PrimaryNavbar extends React.Component {
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav
 						className="link-group"
-						defaultActiveKey={this.props.activeLink}
+						activeKey={this.state.activeLink}
 					>
 						{this.createLinks({
 							Home: "/",
 							About: "/about",
 							Blog: "/blog",
-							Contact: "/contact"
+							Contact: "/contact",
 						})}
 					</Nav>
 				</Navbar.Collapse>
